@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouText - YouTube Transcript Fetcher</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/you-text-logo.png" alt="YouText Logo" id="logo">
+        <p>Get transcripts from YouTube videos instantly</p>
+        
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+        
+        <form id="transcriptForm">
+            <textarea id="youtubeUrls" placeholder="Enter YouTube URLs (one per line)" rows="4" required></textarea>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="cn">Chinese</option>
+                <option value="ko">Korean</option>
+            </select>
+            <button type="submit">Get Transcript</button>
+        </form>
+
+        <div id="options" style="display: none; margin-bottom: 1rem;">
+            <label><input type="checkbox" id="flatTextCheckbox" checked> Flat Text</label>
+        </div>
+
+        <div id="result" class="result-container">
+            <h2>Transcript</h2>
+            <iframe id="videoPreview" style="display: none;" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <pre id="transcriptText"></pre>
+            <div class="button-container">
+                <button id="copyButton" style="display: none;">Copy Transcript</button>
+                <button id="downloadButton" style="display: none;">Download Transcript</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
